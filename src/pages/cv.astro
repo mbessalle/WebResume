@@ -1,0 +1,42 @@
+---
+// Import the SolidJS component
+import EmploymentHistoryComponent from '../components/EmploymentHistory';
+
+// Mock data for your CV. You should replace this with your actual data.
+const jobs = [
+  {
+    role: "Fullstack Engineer",
+    company: "Veiligwerk",
+    location: "Leeuwenveldseweg 14f, 1382 LX Weesp, The Netherlands",
+    startDate: "June 2023",
+    endDate: "Present",
+    description: [
+      "Working on a variety of software and infrastructure projects.",
+      // Add more bullet points here.
+    ],
+  },
+  // ... Add other jobs here
+];
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Moises Bessalle</title>
+  <link href="/home/moises/WebResume/public/global.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+  <header class="mb-8">
+    <h1 class="text-3xl font-bold">Moises Bessalle</h1>
+    <p class="text-xl">Consultant</p>
+  </header>
+  <main>
+    <section class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">Employment History</h2>
+      <EmploymentHistoryComponent jobs={jobs} />
+    </section>
+    <!-- You can add more sections here for skills, education, etc. -->
+  </main>
+</body>
+</html>
