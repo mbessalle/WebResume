@@ -1,3 +1,27 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-gray-300; /* Dark background and light text */
+  }
+  h1, h2, h3 {
+    @apply text-gray-100; /* Lighter text for headings */
+  }
+  /* Customize other elements as needed */
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-800 rounded-xl p-7 mb-5; /* Dark cards with spacing */
+  }
+  .badge {
+    @apply bg-green-600 text-white px-3 py-1 rounded-full text-xs; /* Example badge style */
+  }
+  /* Add more component styles as needed */
+}
+
+@layer utilities {
+  /* Add custom utilities as needed */
+}

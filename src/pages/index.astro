@@ -1,137 +1,41 @@
 ---
 // Import components
-import ExperienceComponent from '../components/ExperienceComponent';
-import EducationComponent from '../components/EducationComponent';
+import NavBar from '../components/NavBar.astro';
 
-// Prepare your data as described above
-const education = [
-  {
-    program: "Fullstack JavaScript Developer",
-    institution: "Codaisseur, Amsterdam",
-    startDate: "May 2020",
-    endDate: "July 2020",
-    description: [
-      "Intensive fullstack JavaScript developer Bootcamp."
-    ],
-  },
-  {
-    program: "Executive Postgraduate in Strategic Sales & Management",
-    institution: "Pontificia Universidad Catolica de Chile, Santiago de Chile",
-    startDate: "April 2015",
-    endDate: "December 2015",
-    description: [
-      "Postgraduate program focused on strategic sales techniques and management skills."
-    ],
-  },
-  {
-    program: "BSc Chemical Engineering",
-    institution: "Universidad de Concepcion, Concepcion",
-    startDate: "March 2009",
-    endDate: "August 2014",
-    description: [
-      "Undergraduate program in chemical engineering with a focus on process engineering, materials science, and industrial chemistry."
-    ],
-  },
-  // Add more education entries if needed
-];
-
-const experience = [
-  {
-    role: "Fullstack Engineer",
-    company: "Veiligwerk",
-    location: "Weesp",
-    startDate: "June 2023",
-    endDate: "Present",
-    description: [
-      "Working on a variety of software and infrastructure projects such as developing migration scripts, API's and web applications.",
-    ],
-  },
-  {
-    role: "Embedded Analytics Consultant",
-    company: "Biztory",
-    location: "Amsterdam",
-    startDate: "November 2021",
-    endDate: "August 2022",
-    description: [
-      "Providing technical expertise to clients looking to embed Tableau in their existing portals.",
-      "Supporting clients with Tableau Server installs and upgrades.",
-      "Understanding how performance is driven in Tableau and helping clients identify the root cause of performance-related issues stemming from Tableau Desktop or Tableau Server.",
-      "Working with the Tableau API's for both performance analysis and automation of tasks.",
-      "Helping clients manage their users and content on Tableau Server.",
-      "Providing support for Tableau Desktop technical issues.",
-    ],
-  },
-  {
-    role: "Crypto Content Writer & Market Analyst",
-    company: "SonOfCrypto.com",
-    location: "Amsterdam",
-    startDate: "February 2021",
-    endDate: "November 2021",
-    description: [
-      "Writing articles about relevant financial news in the crypto space and about price prediction.",
-    ],
-  },
-  {
-    role: "Mathematics Teacher for Engineering & Computer Science",
-    company: "Study Group",
-    location: "Amsterdam",
-    startDate: "September 2018",
-    endDate: "January 2019",
-    description: [
-      "Teaching algebra and calculus to international engineering and Computer Science students.",
-    ],
-  },
-  {
-    role: "Financial Account Manager",
-    company: "Fundbox",
-    location: "Tel-Aviv",
-    startDate: "March 2017",
-    endDate: "August 2017",
-    description: [
-      "Implementing procedures for collecting, analyzing, verifying, and reporting financial information from managed accounts and developing specific custom financial plans for clients.",
-    ],
-  },
-  {
-    role: "Financial analyst",
-    company: "MIG Financial Services",
-    location: "Tel-Aviv",
-    startDate: "May 2016",
-    endDate: "February 2017",
-    description: [
-      "Providing financial insight in Forex, stock and commodities markets for MIG clients.",
-    ],
-  },
-  {
-    role: "Team leader R&D Engineer",
-    company: "HotClick",
-    location: "Santiago de Chile",
-    startDate: "January 2015",
-    endDate: "April 2016",
-    description: [
-      "Researching, designing and developing of self-heating vacuum flask for Creative Business Cup award-winning high tech startup from University of Desarrollo in Chile.",
-    ],
-  },
-  // Add additional jobs if any
-];
+// Define props
+interface Props {
+	title: string;
+}
 
 ---
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Moises Bessalle</title>
-  <link href="/global.css" rel="stylesheet">
+  <title>Moises Bessalle</title>
+  <link rel="stylesheet" href="public/global.css" />
 </head>
-<body class="bg-gray-100 p-8">
-  <header class="mb-8">
-    <h1 class="text-3xl font-bold">Moises Bessalle</h1>
-    <p class="text-xl">Fullstack Engineer</p>
+<body class="bg-gray-100">
+  <NavBar />
+  <header class="text-center p-8">
+    <img src="moisesfotocv.png" alt="Moises Bessalle" class="rounded-full mx-auto" />
+    <h1 class="text-3xl font-bold mt-4">Moises Bessalle</h1>
+    <p class="mt-2">Fullstack Engineer</p>
   </header>
+  
+  <main class="p-8">
+    <section>
+      <h2>About Me</h2>
+      <p>Here's a brief introduction about yourself.</p>
+    </section>
+  </main>
+</body>
+
   
   <main>
     <aside>
       <!-- Sidebar content -->
-      <a href="/cv/moises_bessalle_cv.pdf" download="Moises_Bessalle_CV.pdf" class="download-cv-button">
+      <a href="Moises_Bessalle_CV.pdf" download="Moises_Bessalle_CV.pdf" class="download-cv-button">
         Download CV
       </a>
     </aside>
@@ -140,16 +44,7 @@ const experience = [
       <h2>About Me</h2>
       <p>Your about me description here.</p>
     </section>
-    
-    <section>
-      <h2>Experience</h2>
-      <ExperienceComponent experience={experience} />
-    </section>
-    
-    <section>
-      <h2>Education</h2>
-      <EducationComponent education={education} />
-    </section>
+ 
   </main>
 </body>
 </html>

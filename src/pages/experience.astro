@@ -1,0 +1,21 @@
+---
+import NavBar from "../components/NavBar.astro";
+import ExperienceComponent from "../components/ExperienceComponent";
+import { experience } from "./cv.js"; // Assuming you're exporting the experience data from index.astro
+---
+
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="public/global.css" />
+  </head>
+
+  <body>
+    <NavBar />
+
+    <main class="p-8">
+      <section>
+        <ExperienceComponent experience={experience} />
+      </section>
+    </main>
+  </body>
+</html>
