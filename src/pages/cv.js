@@ -77,7 +77,7 @@ const experience = [
       "Researching, designing and developing of self-heating vacuum flask for Creative Business Cup award-winning high tech startup from University of Desarrollo in Chile.",
     ],
   },
-  // Add additional jobs if any
+
 ];
 
 
@@ -109,7 +109,7 @@ const education = [
       "Undergraduate program in chemical engineering with a focus on process engineering, materials science, and industrial chemistry."
     ],
   },
-  // Add more education entries if needed
+
 ];
 
 export  {experience};

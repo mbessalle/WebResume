@@ -9,6 +9,6 @@ export default {
 
 module.exports = {
   purge: ['./src/**/*.{astro,js,jsx,ts,tsx,vue}'],
-  // other configurations
+ 
 }
 

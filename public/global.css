@@ -9,7 +9,7 @@
   h1, h2, h3 {
     @apply text-gray-100; /* Lighter text for headings */
   }
-  /* Customize other elements as needed */
+
 }
 
 @layer components {
@@ -19,9 +19,9 @@
   .badge {
     @apply bg-green-600 text-white px-3 py-1 rounded-full text-xs; /* Example badge style */
   }
-  /* Add more component styles as needed */
+
 }
 
 @layer utilities {
-  /* Add custom utilities as needed */
+
 }

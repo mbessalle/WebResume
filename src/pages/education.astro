@@ -1,20 +1,19 @@
 ---
-import NavBar from "../components/NavBar.astro";
-import EducationComponent from "../components/EducationComponent";
-import { education } from "./cv.js"; // Assuming you're exporting the education data from index.astro
+import NavBar from '../components/NavBar.astro';
+import EducationComponent from '../components/EducationComponent';
+import { education } from './cv.js'; 
 ---
-
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="/global.css" />
-  </head>
-  <body>
-    <NavBar />
-
-    <main class="p-8">
-      <section>
-        <EducationComponent education={education} />
-      </section>
-    </main>
-  </body>
+<head>
+  <link rel="stylesheet" href="/global.css" />
+</head>
+<body>
+  <NavBar />
+  
+  <main class="p-8">
+    <section>
+      <EducationComponent education={education} />
+    </section>
+  </main>
+</body>
 </html>
