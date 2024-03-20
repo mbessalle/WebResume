@@ -3,5 +3,30 @@
   <div>
     <a href="/experience" class="p-2 hover:bg-gray-700 rounded">Experience</a>
     <a href="/education" class="p-2 hover:bg-gray-700 rounded">Education</a>
+    <button id="connectWallet" class="p-2 hover:bg-gray-700 rounded">Connect Metamask Wallet</button>
   </div>
 </nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const connectWalletButton = document.getElementById('connectWallet');
+    if (connectWalletButton) {
+      connectWalletButton.addEventListener('click', async () => {
+        if (window.ethereum) {
+          try {
+            await window.ethereum.request({ method: 'eth_requestAccounts' });
+            console.log('MetaMask is connected!');
+          } catch (error) {
+            if (error instanceof Error) {
+              alert(`Connection failed: ${error.message}`);
+            } else {
+              alert('An unknown error occurred');
+            }
+          }
+        } else {
+          alert("MetaMask is not installed on your browser.");
+        }
+      });
+    }
+  });
+</script>

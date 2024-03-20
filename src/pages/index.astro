@@ -1,50 +1,41 @@
 ---
-// Import components
+// Import the NavBar component
 import NavBar from '../components/NavBar.astro';
 
-// Define props
-interface Props {
-	title: string;
-}
-
+// You can remove the Props interface if it's not being used elsewhere
 ---
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moises Bessalle</title>
+  <!-- Make sure your path to global.css is correct -->
   <link rel="stylesheet" href="public/global.css" />
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-900 text-white"> <!-- Set the body to have a dark background -->
   <NavBar />
-  <header class="text-center p-8">
-    <img src="moisesfotocv.png" alt="Moises Bessalle" class="rounded-full mx-auto" />
-    <h1 class="text-3xl font-bold mt-4">Moises Bessalle</h1>
-    <p class="mt-2">Fullstack Engineer</p>
-  </header>
-  
-  <main class="p-8">
-    <section>
-      <h2>About Me</h2>
-      <p>Here's a brief introduction about yourself.</p>
-    </section>
-  </main>
-</body>
+  <div class="container mx-auto p-8">
+    <header class="text-center">
+      <!-- Adjust the image size with Tailwind's width and height utility classes -->
+      <img src="/moisesfotocv.png" alt="Moises Bessalle" class="rounded-full w-32 h-32 mx-auto" />
+      <h1 class="text-3xl font-bold mt-4">Moises Bessalle</h1>
+      <p class="mt-2">Fullstack Engineer</p>
+    </header>
+    
+    <main>
+      <section class="mt-6">
+        <h2 class="text-xl font-semibold mb-3">About Me</h2>
+        <!-- Custom description based on your CV -->
+        <p class="text-lg">A sociable and energetic Fullstack Engineer with a robust technical background and a passion for collaborative innovation. My experience spans various roles where teamwork and effective communication have been key to success. I'm always eager to bring people together to solve complex problems and drive projects forward.</p>
+      </section>
+    </main>
 
-  
-  <main>
-    <aside>
-      <!-- Sidebar content -->
-      <a href="Moises_Bessalle_CV.pdf" download="Moises_Bessalle_CV.pdf" class="download-cv-button">
+    <!-- The sidebar content seems to be for another section. Adjust or remove as necessary. -->
+    <aside class="mt-6">
+      <a href="/Moises_Bessalle_CV.pdf" download="Moises_Bessalle_CV.pdf" class="bg-yellow-500 text-black rounded px-4 py-2 hover:bg-yellow-600 transition-colors">
         Download CV
       </a>
     </aside>
-    
-    <section>
-      <h2>About Me</h2>
-      <p>Your about me description here.</p>
-    </section>
- 
-  </main>
+  </div>
 </body>
 </html>
