@@ -1,14 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
+module.exports = {
+  content: [
+    './src/**/*.{astro,js,jsx,ts,tsx}', 
+  ],
+  darkMode: 'class', 
   theme: {
     extend: {},
   },
-  plugins: [],
-}
-
-module.exports = {
-  purge: ['./src/**/*.{astro,js,jsx,ts,tsx,vue}'],
- 
-}
-
+  plugins: [
+    require('@tailwindcss/typography'), 
+  ],
+};
