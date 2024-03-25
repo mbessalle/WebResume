@@ -1,12 +1,24 @@
 module.exports = {
   content: [
-    './src/**/*.{astro,js,jsx,ts,tsx}', 
+    './src/**/*.{astro,js,jsx,ts,tsx}',
   ],
-  darkMode: 'class', 
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            // This will justify text in all 'prose' class elements
+            p: {
+              textAlign: 'justify',
+            },
+            // Add other elements as needed
+          },
+        },
+      }),
+    },
   },
   plugins: [
-    require('@tailwindcss/typography'), 
+    require('@tailwindcss/typography'),
   ],
 };

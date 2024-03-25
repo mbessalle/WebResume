@@ -1,5 +1,6 @@
 ---
-title: "The Transformative Power of Volunteering"
+layout: ../layouts/MarkdownLayout.astro
+title: "Volunteering"
 ---
 
 # The Transformative Power of Volunteering
