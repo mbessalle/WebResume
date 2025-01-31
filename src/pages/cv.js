@@ -9,7 +9,7 @@ const experience = [
     startDate: "June 2023",
     endDate: "Present",
     description: [
-      "Working on a variety of software and infrastructure projects such as developing migration scripts, API's and web applications.",
+      "Working on a variety of software and infrastructure projects using python, React, Node and SQL to perform tasks such as migration scripts, API's, web applications and LLM agentic workflows.",
     ],
   },
   {
@@ -17,7 +17,7 @@ const experience = [
     company: "Biztory",
     location: "Amsterdam",
     startDate: "November 2021",
-    endDate: "August 2022",
+    endDate: "March 2023",
     description: [
       "Providing technical expertise to clients looking to embed Tableau in their existing portals.",
       "Supporting clients with Tableau Server installs and upgrades.",
@@ -42,7 +42,7 @@ const experience = [
     company: "Study Group",
     location: "Amsterdam",
     startDate: "September 2018",
-    endDate: "January 2019",
+    endDate: "September 2021",
     description: [
       "Teaching algebra and calculus to international engineering and Computer Science students.",
     ],
