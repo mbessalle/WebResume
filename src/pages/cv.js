@@ -82,6 +82,15 @@ const experience = [
 
 
 const education = [
+     {
+    program: "Master's degree, Artificial Intelligence",
+    institution: "Vrije Universiteit Amsterdam (VU Amsterdam)",
+    startDate: "2024",
+    endDate: "present",
+    description: [
+      "Ongoing graduate program in Artificial Intelligence, covering machine learning, data science, and AI-driven solutions."
+    ],
+  },
   {
     program: "Fullstack JavaScript Developer",
     institution: "Codaisseur, Amsterdam",
@@ -89,6 +98,15 @@ const education = [
     endDate: "July 2020",
     description: [
       "Intensive fullstack JavaScript developer Bootcamp."
+    ],
+  },
+  {
+    program: "Master's degree in Science, Business & Innovation, Energy, Environment, and Natural Resources Law",
+    institution: "Vrije Universiteit Amsterdam (VU Amsterdam)",
+    startDate: "2017",
+    endDate: "2020",
+    description: [
+      "Graduate program focusing on science, business innovation, and legal aspects of energy and environmental resources."
     ],
   },
   {
@@ -103,7 +121,7 @@ const education = [
   {
     program: "BSc Chemical Engineering",
     institution: "Universidad de Concepcion, Concepcion",
-    startDate: "March 2009",
+    startDate: "March 2003",
     endDate: "August 2014",
     description: [
       "Undergraduate program in chemical engineering with a focus on process engineering, materials science, and industrial chemistry."
